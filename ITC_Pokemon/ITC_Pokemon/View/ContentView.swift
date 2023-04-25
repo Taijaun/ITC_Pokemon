@@ -13,11 +13,13 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-//            List(pokemonViewModel.pokemonList) { pokemon in
-//                Text(pokemon.name)
-//                Text(pokemon.hp)
-//
-//            }
+            
+            List(pokemonViewModel.pokemonList) { pokemon in
+                HStack{
+                    Text(pokemon.name ?? "")
+                    Text(pokemon.hp ?? "")
+                }
+            }
         }
                 // support concurency when view appears this block of code called to make async api call 
         .task{
