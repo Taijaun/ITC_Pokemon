@@ -7,8 +7,9 @@
 
 import Foundation
 
+@MainActor
 class PokemonViewModel: ObservableObject {
-    @Published var pokemonList = [PokemonDetails]()
+    @Published var pokemonList = [PokemonEntity]()
     
     // initialize Nwetwork
     var manager: Networker

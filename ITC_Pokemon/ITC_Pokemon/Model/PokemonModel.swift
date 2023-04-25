@@ -14,14 +14,33 @@ import Foundation
 
 // MARK: - Welcome
 struct Pokemon: Decodable {
-    let data: [PokemonDetails]
+    let data: [PokemonEntity]
     let page, pageSize, count, totalCount: Int?
 }
 
-// MARK: - Datum
-struct PokemonDetails: Decodable {
-//    var id = UUID()
+// for parsing
+struct PokemonEntity: Decodable{
     
+    let name: String?
+    let subtypes: [String]?
+    let level, hp: String?
+    let types: [String]?
+    let abilities: [Ability]?
+    let attacks: [Attack]?
+    let weaknesses, resistances: [Resistance]?
+    let number, artist, rarity: String?
+    let nationalPokedexNumbers: [Int]?
+    let legalities: Legalities?
+    let images: DatumImages?
+    let tcgplayer: Tcgplayer?
+    let cardmarket: Cardmarket?
+}
+// MARK: - Datum
+
+// For ui
+struct PokemonDetails: Decodable, Identifiable {
+    
+    var id = UUID()
     let name: String?
     let subtypes: [String]?
     let level, hp: String?
