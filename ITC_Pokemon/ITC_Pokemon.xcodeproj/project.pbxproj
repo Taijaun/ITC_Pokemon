@@ -17,6 +17,7 @@
 		DC8354B329F7C567003D7840 /* PokemonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8354B229F7C567003D7840 /* PokemonModel.swift */; };
 		DC8354B829F7C77B003D7840 /* APIEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8354B729F7C77B003D7840 /* APIEndpoints.swift */; };
 		DC8354BB29F7CB2C003D7840 /* Networker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8354BA29F7CB2C003D7840 /* Networker.swift */; };
+		DC8354BD29F7CBE9003D7840 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8354BC29F7CBE9003D7840 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		DC8354B229F7C567003D7840 /* PokemonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonModel.swift; sourceTree = "<group>"; };
 		DC8354B729F7C77B003D7840 /* APIEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoints.swift; sourceTree = "<group>"; };
 		DC8354BA29F7CB2C003D7840 /* Networker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networker.swift; sourceTree = "<group>"; };
+		DC8354BC29F7CBE9003D7840 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				DC8354BA29F7CB2C003D7840 /* Networker.swift */,
+				DC8354BC29F7CBE9003D7840 /* NetworkManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -298,6 +301,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC8354BD29F7CBE9003D7840 /* NetworkManager.swift in Sources */,
 				DC8354BB29F7CB2C003D7840 /* Networker.swift in Sources */,
 				DC83548B29F7C0EA003D7840 /* ContentView.swift in Sources */,
 				DC8354B329F7C567003D7840 /* PokemonModel.swift in Sources */,
