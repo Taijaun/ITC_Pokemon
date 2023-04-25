@@ -9,6 +9,6 @@ import Foundation
 
 protocol Networker {
     
-    func callApi(urlString: String)
+    func callApi(urlString: String) async throws -> Data
     
 }
