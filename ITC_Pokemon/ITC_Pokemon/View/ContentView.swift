@@ -13,19 +13,25 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            List(pokemonViewModel.pokemonList) { pokemon in
-                Text(pokemon.name)
-                Text(pokemon.hp)
+//            List(pokemonViewModel.pokemonList) { pokemon in
+//                Text(pokemon.name)
+//                Text(pokemon.hp)
+//
+//            }
+        }
+                // support concurency when view appears this block of code called to make async api call 
+        .task{
+                    await pokemonViewModel.getListOfPokemons(urlString: APIEndpoints.pokemonListEndpoint)
+                }
                 
-            }.onAppear{
-                pokemonViewModel.getListOfPokemons(urlString: APIEndpoints.pokemonListEndpoint)
-            }
-        .padding()
+        
+            .padding()
+        }
     }
-}
+    
+    struct ContentView_Previews: PreviewProvider {
+        static var previews: some View {
+            ContentView(pokemonViewModel: PokemonViewModel(manager: NetworkManager()))
+        }
+    }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView(pokemonViewModel: PokemonViewModel())
-    }
-}

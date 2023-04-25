@@ -11,7 +11,8 @@ import SwiftUI
 struct ITC_PokemonApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            // starting on content view with ViewModel and use NetworkManager to call API immedately 
+            ContentView(pokemonViewModel: PokemonViewModel(manager: NetworkManager()))
         }
     }
 }
