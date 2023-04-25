@@ -13,13 +13,13 @@ import Foundation
 //   let welcome = try? JSONDecoder().decode(Welcome.self, from: jsonData)
 
 // MARK: - Welcome
-struct Welcome: Decodable {
-    let data: [Datum]
+struct Pokemon: Decodable {
+    let data: [PokemonDetails]
     let page, pageSize, count, totalCount: Int
 }
 
 // MARK: - Datum
-struct Datum: Decodable {
+struct PokemonDetails: Decodable {
     let id, name: String
     let subtypes: [String]
     let level, hp: String
