@@ -10,6 +10,7 @@ import Foundation
 @MainActor
 class PokemonViewModel: ObservableObject {
     @Published var pokemonList = [PokemonDetails]()
+    @Published var customisedError : NetworkingError?
     
     // initialize Nwetwork
     var manager: Networker
@@ -21,6 +22,7 @@ class PokemonViewModel: ObservableObject {
     func getListOfPokemons(urlString: String) async{
         // convert URL string to URL
         guard let url = URL(string: urlString) else {
+            customisedError = NetworkingError.invalidURL
             return
         }
         do {
@@ -35,7 +37,13 @@ class PokemonViewModel: ObservableObject {
             print(self.pokemonList)
             
         }catch let error{
+            if error as?  NetworkingError == .parsingError{
+                customisedError = .parsingError
+            } else {
+                customisedError = .dataNotFound
+            }
             print(error.localizedDescription)
+            
             
             
         }

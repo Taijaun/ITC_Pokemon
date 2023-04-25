@@ -11,30 +11,40 @@ struct ContentView: View {
     
     @StateObject var pokemonViewModel: PokemonViewModel
     @State var path = [Root]()
-    
+    @State var errorOccured = false
 
     var body: some View {
         
         NavigationStack(path: $path){
             
             VStack {
-                
-                List(pokemonViewModel.pokemonList) { pokemon in
-                    NavigationLink{
-                        DetailsScreen(artist: pokemon.artist ?? "", rarity: pokemon.rarity ?? "", pokemonImage: pokemon.images?.large ?? "")
-                    }label: {
-                        HStack{
-                            ListCell(thumbnail: pokemon.images?.small ?? "https://www.kombatcards.co.uk/storage/2022/09/Pokeback-1.png")
-                        }
+                if pokemonViewModel.customisedError != nil {
+                    ProgressView().alert(isPresented: $errorOccured) {
+                        Alert(title: Text("Error"), message: Text(pokemonViewModel.customisedError?.errorDesc ?? ""), dismissButton: .default(Text("Close")))
                     }
-                    
+                } else {
+                    List(pokemonViewModel.pokemonList) { pokemon in
+                        NavigationLink{
+                            DetailsScreen(artist: pokemon.artist ?? "", rarity: pokemon.rarity ?? "", pokemonImage: pokemon.images?.large ?? "")
+                        }label: {
+                            HStack{
+                                ListCell(thumbnail: pokemon.images?.small ?? "https://www.kombatcards.co.uk/storage/2022/09/Pokeback-1.png")
+                            }
+                        }
+                        
+                    }
                 }
             }.refreshable {
                 await pokemonViewModel.getListOfPokemons(urlString: APIEndpoints.pokemonListEndpoint)
             }
             // support concurency when view appears this block of code called to make async api call
             .task{
+                
                 await pokemonViewModel.getListOfPokemons(urlString: APIEndpoints.pokemonListEndpoint)
+                
+                if pokemonViewModel.customisedError != nil {
+                    errorOccured = true
+                }
             }
             
             
