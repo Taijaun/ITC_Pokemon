@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D42112B129F7CD460013943B /* PokemonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42112B029F7CD460013943B /* PokemonViewModel.swift */; };
 		DC83548929F7C0EA003D7840 /* ITC_PokemonApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC83548829F7C0EA003D7840 /* ITC_PokemonApp.swift */; };
 		DC83548B29F7C0EA003D7840 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC83548A29F7C0EA003D7840 /* ContentView.swift */; };
 		DC83548D29F7C0EB003D7840 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC83548C29F7C0EB003D7840 /* Assets.xcassets */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D42112B029F7CD460013943B /* PokemonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonViewModel.swift; sourceTree = "<group>"; };
 		DC83548529F7C0EA003D7840 /* ITC_Pokemon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ITC_Pokemon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC83548829F7C0EA003D7840 /* ITC_PokemonApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITC_PokemonApp.swift; sourceTree = "<group>"; };
 		DC83548A29F7C0EA003D7840 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 		DC8354B629F7C6C1003D7840 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				D42112B029F7CD460013943B /* PokemonViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -304,6 +307,7 @@
 				DC8354BD29F7CBE9003D7840 /* NetworkManager.swift in Sources */,
 				DC8354BB29F7CB2C003D7840 /* Networker.swift in Sources */,
 				DC83548B29F7C0EA003D7840 /* ContentView.swift in Sources */,
+				D42112B129F7CD460013943B /* PokemonViewModel.swift in Sources */,
 				DC8354B329F7C567003D7840 /* PokemonModel.swift in Sources */,
 				DC83548929F7C0EA003D7840 /* ITC_PokemonApp.swift in Sources */,
 				DC8354B829F7C77B003D7840 /* APIEndpoints.swift in Sources */,
