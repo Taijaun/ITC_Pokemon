@@ -14,6 +14,7 @@
 		DC83549A29F7C0EB003D7840 /* ITC_PokemonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC83549929F7C0EB003D7840 /* ITC_PokemonTests.swift */; };
 		DC8354A429F7C0EC003D7840 /* ITC_PokemonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8354A329F7C0EC003D7840 /* ITC_PokemonUITests.swift */; };
 		DC8354A629F7C0EC003D7840 /* ITC_PokemonUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8354A529F7C0EC003D7840 /* ITC_PokemonUITestsLaunchTests.swift */; };
+		DC8354B329F7C567003D7840 /* PokemonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8354B229F7C567003D7840 /* PokemonModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		DC83549F29F7C0EC003D7840 /* ITC_PokemonUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ITC_PokemonUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC8354A329F7C0EC003D7840 /* ITC_PokemonUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITC_PokemonUITests.swift; sourceTree = "<group>"; };
 		DC8354A529F7C0EC003D7840 /* ITC_PokemonUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITC_PokemonUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		DC8354B229F7C567003D7840 /* PokemonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 				DC83548829F7C0EA003D7840 /* ITC_PokemonApp.swift */,
 				DC83548A29F7C0EA003D7840 /* ContentView.swift */,
 				DC83548C29F7C0EB003D7840 /* Assets.xcassets */,
+				DC8354B229F7C567003D7840 /* PokemonModel.swift */,
 				DC83548E29F7C0EB003D7840 /* Preview Content */,
 			);
 			path = ITC_Pokemon;
@@ -258,6 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC83548B29F7C0EA003D7840 /* ContentView.swift in Sources */,
+				DC8354B329F7C567003D7840 /* PokemonModel.swift in Sources */,
 				DC83548929F7C0EA003D7840 /* ITC_PokemonApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
