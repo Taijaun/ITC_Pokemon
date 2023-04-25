@@ -13,13 +13,13 @@ import Foundation
 //   let welcome = try? JSONDecoder().decode(Welcome.self, from: jsonData)
 
 // MARK: - Welcome
-struct Welcome: Codable {
+struct Welcome: Decodable {
     let data: [Datum]
     let page, pageSize, count, totalCount: Int
 }
 
 // MARK: - Datum
-struct Datum: Codable {
+struct Datum: Decodable {
     let id, name: String
     let subtypes: [String]
     let level, hp: String
@@ -42,12 +42,12 @@ struct Datum: Codable {
 }
 
 // MARK: - Ability
-struct Ability: Codable {
+struct Ability: Decodable {
     let name, text, type: String
 }
 
 // MARK: - Attack
-struct Attack: Codable {
+struct Attack: Decodable {
     let name: String
     let cost: [String]
     let convertedEnergyCost: Int
@@ -55,14 +55,14 @@ struct Attack: Codable {
 }
 
 // MARK: - Cardmarket
-struct Cardmarket: Codable {
+struct Cardmarket: Decodable {
     let url: String
     let updatedAt: String
     let prices: [String: Double]
 }
 
 // MARK: - Set
-struct Set: Codable {
+struct Set: Decodable {
     let id, name, series: String
     let printedTotal, total: Int
     let legalities: Legalities
@@ -71,39 +71,39 @@ struct Set: Codable {
 }
 
 // MARK: - SetImages
-struct SetImages: Codable {
+struct SetImages: Decodable {
     let symbol, logo: String
 }
 
 // MARK: - Legalities
-struct Legalities: Codable {
+struct Legalities: Decodable {
     let unlimited: String
 }
 
 // MARK: - DatumImages
-struct DatumImages: Codable {
+struct DatumImages: Decodable {
     let small, large: String
 }
 
 // MARK: - Resistance
-struct Resistance: Codable {
+struct Resistance: Decodable {
     let type, value: String
 }
 
 // MARK: - Tcgplayer
-struct Tcgplayer: Codable {
+struct Tcgplayer: Decodable {
     let url: String
     let updatedAt: String
     let prices: Prices
 }
 
 // MARK: - Prices
-struct Prices: Codable {
+struct Prices: Decodable {
     let holofoil, reverseHolofoil: Holofoil
 }
 
 // MARK: - Holofoil
-struct Holofoil: Codable {
+struct Holofoil: Decodable {
     let low, mid, high, market: Double
     let directLow: Double?
 }
