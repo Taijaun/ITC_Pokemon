@@ -19,8 +19,10 @@ struct Pokemon: Decodable {
 }
 
 // MARK: - Datum
-struct PokemonDetails: Decodable {
-    let id, name: String
+struct PokemonDetails: Decodable, Identifiable {
+    var id = UUID()
+    
+    let name: String
     let subtypes: [String]
     let level, hp: String
     let types: [String]

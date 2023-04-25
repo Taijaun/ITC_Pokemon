@@ -8,19 +8,24 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @StateObject var pokemonViewModel: PokemonViewModel
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
-        }
+            List(pokemonViewModel.pokemonList) { pokemon in
+                Text(pokemon.name)
+                Text(pokemon.hp)
+                
+            }.onAppear{
+                pokemonViewModel.getListOfPokemons(urlString: APIEndpoints.pokemonListEndpoint)
+            }
         .padding()
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(pokemonViewModel: PokemonViewModel())
     }
 }
