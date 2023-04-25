@@ -96,10 +96,12 @@
 		DC83548729F7C0EA003D7840 /* ITC_Pokemon */ = {
 			isa = PBXGroup;
 			children = (
+				DC8354B629F7C6C1003D7840 /* ViewModel */,
+				DC8354B529F7C6B8003D7840 /* View */,
+				DC8354B429F7C6A8003D7840 /* Model */,
 				DC83548829F7C0EA003D7840 /* ITC_PokemonApp.swift */,
 				DC83548A29F7C0EA003D7840 /* ContentView.swift */,
 				DC83548C29F7C0EB003D7840 /* Assets.xcassets */,
-				DC8354B229F7C567003D7840 /* PokemonModel.swift */,
 				DC83548E29F7C0EB003D7840 /* Preview Content */,
 			);
 			path = ITC_Pokemon;
@@ -128,6 +130,28 @@
 				DC8354A529F7C0EC003D7840 /* ITC_PokemonUITestsLaunchTests.swift */,
 			);
 			path = ITC_PokemonUITests;
+			sourceTree = "<group>";
+		};
+		DC8354B429F7C6A8003D7840 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DC8354B229F7C567003D7840 /* PokemonModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DC8354B529F7C6B8003D7840 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DC8354B629F7C6C1003D7840 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
