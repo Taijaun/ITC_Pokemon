@@ -21,7 +21,7 @@ struct ContentView: View {
                 
                 List(pokemonViewModel.pokemonList) { pokemon in
                     NavigationLink{
-                        DetailsScreen(hp: pokemon.hp ?? "", level: pokemon.level ?? "")
+                        DetailsScreen(artist: pokemon.artist ?? "", rarity: pokemon.rarity ?? "", pokemonImage: pokemon.images?.large ?? "")
                     }label: {
                         HStack{
                             ListCell(thumbnail: pokemon.images?.small ?? "https://www.kombatcards.co.uk/storage/2022/09/Pokeback-1.png")
@@ -29,6 +29,8 @@ struct ContentView: View {
                     }
                     
                 }
+            }.refreshable {
+                await pokemonViewModel.getListOfPokemons(urlString: APIEndpoints.pokemonListEndpoint)
             }
             // support concurency when view appears this block of code called to make async api call
             .task{
