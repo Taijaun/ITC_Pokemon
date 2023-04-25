@@ -101,8 +101,6 @@
 				DC8354B429F7C6A8003D7840 /* Model */,
 				DC8354B529F7C6B8003D7840 /* View */,
 				DC8354B629F7C6C1003D7840 /* ViewModel */,
-				DC83548829F7C0EA003D7840 /* ITC_PokemonApp.swift */,
-				DC83548A29F7C0EA003D7840 /* ContentView.swift */,
 				DC83548C29F7C0EB003D7840 /* Assets.xcassets */,
 				DC83548E29F7C0EB003D7840 /* Preview Content */,
 			);
@@ -146,6 +144,8 @@
 		DC8354B529F7C6B8003D7840 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				DC83548829F7C0EA003D7840 /* ITC_PokemonApp.swift */,
+				DC83548A29F7C0EA003D7840 /* ContentView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
