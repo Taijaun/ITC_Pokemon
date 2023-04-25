@@ -21,7 +21,7 @@ struct Pokemon: Decodable {
 // for parsing
 struct PokemonEntity: Decodable{
     
-    let name: String?
+    let name: String
     let subtypes: [String]?
     let level, hp: String?
     let types: [String]?

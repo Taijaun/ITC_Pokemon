@@ -21,7 +21,7 @@ struct ContentView: View {
                 
                 List(pokemonViewModel.pokemonList) { pokemon in
                     NavigationLink{
-                        DetailsScreen()
+                        DetailsScreen(hp: pokemon.hp ?? "", level: pokemon.level ?? "")
                     }label: {
                         HStack{
                             ListCell(thumbnail: pokemon.images?.small ?? "https://www.kombatcards.co.uk/storage/2022/09/Pokeback-1.png")

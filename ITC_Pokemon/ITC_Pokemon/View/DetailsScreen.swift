@@ -8,13 +8,23 @@
 import SwiftUI
 
 struct DetailsScreen: View {
+    
+    let hp: String
+    let level: String
+    
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+        VStack{
+            Text(hp)
+            Text(level)
+        }
     }
+    
 }
 
 struct DetailsScreen_Previews: PreviewProvider {
     static var previews: some View {
-        DetailsScreen()
+        DetailsScreen(hp: "100", level: "100")
     }
 }
