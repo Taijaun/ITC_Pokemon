@@ -16,6 +16,7 @@
 		DC8354A629F7C0EC003D7840 /* ITC_PokemonUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8354A529F7C0EC003D7840 /* ITC_PokemonUITestsLaunchTests.swift */; };
 		DC8354B329F7C567003D7840 /* PokemonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8354B229F7C567003D7840 /* PokemonModel.swift */; };
 		DC8354B829F7C77B003D7840 /* APIEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8354B729F7C77B003D7840 /* APIEndpoints.swift */; };
+		DC8354BB29F7CB2C003D7840 /* Networker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8354BA29F7CB2C003D7840 /* Networker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		DC8354A529F7C0EC003D7840 /* ITC_PokemonUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITC_PokemonUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		DC8354B229F7C567003D7840 /* PokemonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonModel.swift; sourceTree = "<group>"; };
 		DC8354B729F7C77B003D7840 /* APIEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoints.swift; sourceTree = "<group>"; };
+		DC8354BA29F7CB2C003D7840 /* Networker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 		DC83548729F7C0EA003D7840 /* ITC_Pokemon */ = {
 			isa = PBXGroup;
 			children = (
+				DC8354B929F7CA93003D7840 /* Services */,
 				DC8354B429F7C6A8003D7840 /* Model */,
 				DC8354B529F7C6B8003D7840 /* View */,
 				DC8354B629F7C6C1003D7840 /* ViewModel */,
@@ -155,6 +158,14 @@
 			children = (
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		DC8354B929F7CA93003D7840 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				DC8354BA29F7CB2C003D7840 /* Networker.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -287,6 +298,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC8354BB29F7CB2C003D7840 /* Networker.swift in Sources */,
 				DC83548B29F7C0EA003D7840 /* ContentView.swift in Sources */,
 				DC8354B329F7C567003D7840 /* PokemonModel.swift in Sources */,
 				DC83548929F7C0EA003D7840 /* ITC_PokemonApp.swift in Sources */,
