@@ -15,7 +15,7 @@ enum NetworkingError {
     
 }
 
-extension NetworkingError{
+extension NetworkingError: LocalizedError{
     
     var errorDesc : String? {
         

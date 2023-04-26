@@ -23,8 +23,8 @@ struct DetailsScreen: View {
                         } placeholder: {
                             ProgressView()
                         }
-            Text("artist: \(artist)")
-            Text("rarity: \(rarity)")
+            Text(NSLocalizedString("artist_label", comment: "Label displaying artists name") + artist)
+            Text(NSLocalizedString("rarity_label", comment: "Label displaying the rarity value of the card") + rarity)
         }
     }
     

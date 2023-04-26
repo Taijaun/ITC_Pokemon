@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  ITC_Pokemon
+
+  Created by Taijaun Pitt on 26/04/2023.
+  
+*/
+
+"artist_label" = "artist: ";
+"rarity_label" = "rarity: ";

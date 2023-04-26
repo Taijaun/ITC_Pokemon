@@ -28,7 +28,7 @@ struct ContentView: View {
                             DetailsScreen(artist: pokemon.artist ?? "", rarity: pokemon.rarity ?? "", pokemonImage: pokemon.images?.large ?? "")
                         }label: {
                             HStack{
-                                ListCell(thumbnail: pokemon.images?.small ?? "https://www.kombatcards.co.uk/storage/2022/09/Pokeback-1.png")
+                                ListCell(thumbnail: pokemon.images?.small ?? "")
                             }
                         }
                         
@@ -36,8 +36,11 @@ struct ContentView: View {
                 }
             }.refreshable {
                 await pokemonViewModel.getListOfPokemons(urlString: APIEndpoints.pokemonListEndpoint)
+                
+                if pokemonViewModel.customisedError != nil {
+                    errorOccured = true
+                }
             }
-            // support concurency when view appears this block of code called to make async api call
             .task{
                 
                 await pokemonViewModel.getListOfPokemons(urlString: APIEndpoints.pokemonListEndpoint)

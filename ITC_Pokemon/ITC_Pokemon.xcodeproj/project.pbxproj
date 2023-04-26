@@ -22,6 +22,11 @@
 		DC8354BF29F7E78C003D7840 /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8354BE29F7E78C003D7840 /* ListCell.swift */; };
 		DC8354C129F7EBF2003D7840 /* DetailsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8354C029F7EBF2003D7840 /* DetailsScreen.swift */; };
 		DC8354C329F7F322003D7840 /* NetworkingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8354C229F7F322003D7840 /* NetworkingError.swift */; };
+		DC8354C629F912E6003D7840 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DC8354C829F912E6003D7840 /* Localizable.strings */; };
+		DC8354CB29F913D3003D7840 /* PokemonViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8354CA29F913D3003D7840 /* PokemonViewModelTests.swift */; };
+		DC8354CD29F9146D003D7840 /* FakeNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8354CC29F9146D003D7840 /* FakeNetworkManager.swift */; };
+		DC8354CF29F91A4F003D7840 /* pokemon.json in Resources */ = {isa = PBXBuildFile; fileRef = DC8354CE29F91A4F003D7840 /* pokemon.json */; };
+		DC8354D129F91DB3003D7840 /* pokemon_Empty.json in Resources */ = {isa = PBXBuildFile; fileRef = DC8354D029F91DB3003D7840 /* pokemon_Empty.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +65,12 @@
 		DC8354BE29F7E78C003D7840 /* ListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
 		DC8354C029F7EBF2003D7840 /* DetailsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsScreen.swift; sourceTree = "<group>"; };
 		DC8354C229F7F322003D7840 /* NetworkingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingError.swift; sourceTree = "<group>"; };
+		DC8354C729F912E6003D7840 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		DC8354C929F91310003D7840 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		DC8354CA29F913D3003D7840 /* PokemonViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonViewModelTests.swift; sourceTree = "<group>"; };
+		DC8354CC29F9146D003D7840 /* FakeNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeNetworkManager.swift; sourceTree = "<group>"; };
+		DC8354CE29F91A4F003D7840 /* pokemon.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = pokemon.json; sourceTree = "<group>"; };
+		DC8354D029F91DB3003D7840 /* pokemon_Empty.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = pokemon_Empty.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +127,7 @@
 				DC8354B629F7C6C1003D7840 /* ViewModel */,
 				DC83548C29F7C0EB003D7840 /* Assets.xcassets */,
 				DC83548E29F7C0EB003D7840 /* Preview Content */,
+				DC8354C829F912E6003D7840 /* Localizable.strings */,
 			);
 			path = ITC_Pokemon;
 			sourceTree = "<group>";
@@ -131,7 +143,10 @@
 		DC83549829F7C0EB003D7840 /* ITC_PokemonTests */ = {
 			isa = PBXGroup;
 			children = (
+				DC8354D229F91E37003D7840 /* TestJson */,
 				DC83549929F7C0EB003D7840 /* ITC_PokemonTests.swift */,
+				DC8354CA29F913D3003D7840 /* PokemonViewModelTests.swift */,
+				DC8354CC29F9146D003D7840 /* FakeNetworkManager.swift */,
 			);
 			path = ITC_PokemonTests;
 			sourceTree = "<group>";
@@ -181,6 +196,15 @@
 				DC8354C229F7F322003D7840 /* NetworkingError.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		DC8354D229F91E37003D7840 /* TestJson */ = {
+			isa = PBXGroup;
+			children = (
+				DC8354CE29F91A4F003D7840 /* pokemon.json */,
+				DC8354D029F91DB3003D7840 /* pokemon_Empty.json */,
+			);
+			path = TestJson;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,6 +293,7 @@
 			knownRegions = (
 				en,
 				Base,
+				de,
 			);
 			mainGroup = DC83547C29F7C0EA003D7840;
 			productRefGroup = DC83548629F7C0EA003D7840 /* Products */;
@@ -288,6 +313,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC83549029F7C0EB003D7840 /* Preview Assets.xcassets in Resources */,
+				DC8354C629F912E6003D7840 /* Localizable.strings in Resources */,
 				DC83548D29F7C0EB003D7840 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -296,6 +322,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC8354D129F91DB3003D7840 /* pokemon_Empty.json in Resources */,
+				DC8354CF29F91A4F003D7840 /* pokemon.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,7 +358,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC8354CB29F913D3003D7840 /* PokemonViewModelTests.swift in Sources */,
 				DC83549A29F7C0EB003D7840 /* ITC_PokemonTests.swift in Sources */,
+				DC8354CD29F9146D003D7840 /* FakeNetworkManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,11 +388,24 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		DC8354C829F912E6003D7840 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DC8354C729F912E6003D7840 /* en */,
+				DC8354C929F91310003D7840 /* de */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		DC8354A729F7C0EC003D7840 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -423,6 +466,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
