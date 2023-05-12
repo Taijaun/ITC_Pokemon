@@ -12,10 +12,10 @@ struct ContentView: View {
     @StateObject var pokemonViewModel: PokemonViewModel
     @State var path = [Root]()
     @State var errorOccured = false
+    @EnvironmentObject var coordinator: Coordinator
 
     var body: some View {
         
-        NavigationStack(path: $path){
             
             VStack {
                 if pokemonViewModel.customisedError != nil {
@@ -24,8 +24,8 @@ struct ContentView: View {
                     }
                 } else {
                     List(pokemonViewModel.pokemonList) { pokemon in
-                        NavigationLink{
-                            DetailsScreen(artist: pokemon.artist ?? "", rarity: pokemon.rarity ?? "", pokemonImage: pokemon.images?.large ?? "")
+                        Button{
+                            coordinator.goToDetailScreen(pokemon: pokemon)
                         }label: {
                             HStack{
                                 ListCell(thumbnail: pokemon.images?.small ?? "")
@@ -52,17 +52,7 @@ struct ContentView: View {
             
             
             .padding()
-        }
-        .navigationDestination(for: Root.self) { navigate in
-            
-            switch navigate {
-            case .details:
-                EmptyView()
-            default:
-                EmptyView()
-            }
-            
-        }
+        
     }
     
     enum Root{
@@ -73,7 +63,7 @@ struct ContentView: View {
     
     struct ContentView_Previews: PreviewProvider {
         static var previews: some View {
-            ContentView(pokemonViewModel: PokemonViewModel(manager: NetworkManager()))
+            ContentView(pokemonViewModel: PokemonViewModel(manager: NetworkManager())).environmentObject(Coordinator())
         }
     }
 
