@@ -29,6 +29,9 @@
 		DC8354CD29F9146D003D7840 /* FakeNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8354CC29F9146D003D7840 /* FakeNetworkManager.swift */; };
 		DC8354CF29F91A4F003D7840 /* pokemon.json in Resources */ = {isa = PBXBuildFile; fileRef = DC8354CE29F91A4F003D7840 /* pokemon.json */; };
 		DC8354D129F91DB3003D7840 /* pokemon_Empty.json in Resources */ = {isa = PBXBuildFile; fileRef = DC8354D029F91DB3003D7840 /* pokemon_Empty.json */; };
+		DCD64F5C2A12280600B2AF79 /* Quick in Frameworks */ = {isa = PBXBuildFile; productRef = DCD64F5B2A12280600B2AF79 /* Quick */; };
+		DCD64F5F2A12282F00B2AF79 /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = DCD64F5E2A12282F00B2AF79 /* Nimble */; };
+		DCD64F612A12295B00B2AF79 /* BDDPokemonViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD64F602A12295B00B2AF79 /* BDDPokemonViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +78,7 @@
 		DC8354CC29F9146D003D7840 /* FakeNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeNetworkManager.swift; sourceTree = "<group>"; };
 		DC8354CE29F91A4F003D7840 /* pokemon.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = pokemon.json; sourceTree = "<group>"; };
 		DC8354D029F91DB3003D7840 /* pokemon_Empty.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = pokemon_Empty.json; sourceTree = "<group>"; };
+		DCD64F602A12295B00B2AF79 /* BDDPokemonViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BDDPokemonViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +93,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCD64F5C2A12280600B2AF79 /* Quick in Frameworks */,
+				DCD64F5F2A12282F00B2AF79 /* Nimble in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,6 +166,7 @@
 				DC83549929F7C0EB003D7840 /* ITC_PokemonTests.swift */,
 				DC8354CA29F913D3003D7840 /* PokemonViewModelTests.swift */,
 				DC8354CC29F9146D003D7840 /* FakeNetworkManager.swift */,
+				DCD64F602A12295B00B2AF79 /* BDDPokemonViewModelTests.swift */,
 			);
 			path = ITC_PokemonTests;
 			sourceTree = "<group>";
@@ -237,6 +244,8 @@
 			dependencies = (
 			);
 			name = ITC_Pokemon;
+			packageProductDependencies = (
+			);
 			productName = ITC_Pokemon;
 			productReference = DC83548529F7C0EA003D7840 /* ITC_Pokemon.app */;
 			productType = "com.apple.product-type.application";
@@ -255,6 +264,10 @@
 				DC83549729F7C0EB003D7840 /* PBXTargetDependency */,
 			);
 			name = ITC_PokemonTests;
+			packageProductDependencies = (
+				DCD64F5B2A12280600B2AF79 /* Quick */,
+				DCD64F5E2A12282F00B2AF79 /* Nimble */,
+			);
 			productName = ITC_PokemonTests;
 			productReference = DC83549529F7C0EB003D7840 /* ITC_PokemonTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -310,6 +323,10 @@
 				de,
 			);
 			mainGroup = DC83547C29F7C0EA003D7840;
+			packageReferences = (
+				DCD64F5A2A12280600B2AF79 /* XCRemoteSwiftPackageReference "Quick" */,
+				DCD64F5D2A12282F00B2AF79 /* XCRemoteSwiftPackageReference "Nimble" */,
+			);
 			productRefGroup = DC83548629F7C0EA003D7840 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -377,6 +394,7 @@
 				DC8354CB29F913D3003D7840 /* PokemonViewModelTests.swift in Sources */,
 				DC83549A29F7C0EB003D7840 /* ITC_PokemonTests.swift in Sources */,
 				DC8354CD29F9146D003D7840 /* FakeNetworkManager.swift in Sources */,
+				DCD64F612A12295B00B2AF79 /* BDDPokemonViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -701,6 +719,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DCD64F5A2A12280600B2AF79 /* XCRemoteSwiftPackageReference "Quick" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Quick/Quick.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		DCD64F5D2A12282F00B2AF79 /* XCRemoteSwiftPackageReference "Nimble" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Quick/Nimble.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DCD64F5B2A12280600B2AF79 /* Quick */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DCD64F5A2A12280600B2AF79 /* XCRemoteSwiftPackageReference "Quick" */;
+			productName = Quick;
+		};
+		DCD64F5E2A12282F00B2AF79 /* Nimble */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DCD64F5D2A12282F00B2AF79 /* XCRemoteSwiftPackageReference "Nimble" */;
+			productName = Nimble;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DC83547D29F7C0EA003D7840 /* Project object */;
 }

@@ -4,6 +4,7 @@
 //
 //  Created by Taijaun Pitt on 12/05/2023.
 //
+//MVVMC SWIFTUI
 
 import Foundation
 import SwiftUI
@@ -13,10 +14,6 @@ class Coordinator: ObservableObject {
     
     @Published var navigationPath = NavigationPath()
     var pokemon: PokemonDetails?
-    
-    func startCoordinator(){
-        
-    }
     
     func goToDetailScreen(pokemon: PokemonDetails){
         self.pokemon = pokemon

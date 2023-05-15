@@ -20,11 +20,15 @@ final class PokemonViewModelTests: XCTestCase {
     
     func testApiCallWithEverythingCorrect() async throws {
         
+        // Given
         let pokemonViewModel = await PokemonViewModel(manager: FakeNetworkManager())
         XCTAssertNotNil(pokemonViewModel)
         
+        // When
         await pokemonViewModel.getListOfPokemons(urlString: "pokemon")
         let pokemonTestList = await pokemonViewModel.pokemonList
+        
+        // Then
         XCTAssertEqual(pokemonTestList.count, 15)
         
         let error = await pokemonViewModel.customisedError
